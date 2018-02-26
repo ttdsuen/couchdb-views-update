@@ -1,0 +1,26 @@
+{"couchdbs":[
+  {
+    "url":"https://couch1:5984",
+    "every":30,
+    "dbs": {
+      "db1": { "username": "john", "password": "am9objE=" },
+      "db2": { "username": "bob", "password": "Ym9iMQ==" }
+    },
+    "ua": {
+      "ca": "/opt/pki/ca.pem",
+      "key": "/opt/pki/key.pem",
+      "cert": "/opt/pki/cert.pem"
+    }
+  },
+  {
+    "url":"http://couch2:5984",
+    "every":60,
+    "username": "admin",
+    "password": "Ym9iMQ==",
+    "ua": {
+      "request_timeout": 5,
+      "connect_timeout": 1,
+      "inactivity_timeout": 3
+    }
+  }
+]}

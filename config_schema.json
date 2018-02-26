@@ -1,0 +1,92 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+
+    "definitions": {
+        "dbs": {
+            "type": "object",
+            "patternproperties": {
+                "^[a-zA-Z0-9-_]+$": {
+                    "type": "object",
+                    "properties": {
+                        "username": {
+                            "description": "CouchDB database username",
+                            "type": "string"
+                        },
+                
+                        "password": {
+                            "description": "CouchDB database base64 encoded password",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+         },
+         "ua": {
+             "type": "object",
+             "properties": {
+                 "ca": {
+                     "description": "path to the CA certificate",
+                     "type": "string"
+                 },
+                 "key": {
+                     "description": "path to the private key",
+                     "type": "string"
+                 },
+                 "cert": {
+                     "description": "path to the public key",
+                     "type": "string"
+                 },
+                 "request_timeout": {
+                     "description": "request timeout in seconds",
+                     "type": "number"
+                 },
+                 "connect_timeout": {
+                     "description": "connect timeout in seconds",
+                     "type": "number"
+                 },
+                 "inactivity_timeout": {
+                     "description": "inactivity timeout in seconds",
+                     "type": "number"
+                 },
+             },
+             "required": []
+         }
+    },
+
+    "type": "object",
+    "properties": {
+        "couchdbs": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "url": {
+                        "description": "CouchDB URL",
+                        "type": "string"
+                    },
+            
+                    "username": {
+                        "description": "CouchDB instance username",
+                        "type": "string"
+                    },
+            
+                    "password": {
+                        "description": "CouchDB instance base64 encoded password",
+                        "type": "string"
+                    },
+            
+                    "every": {
+                        "description": "Update every N seconds",
+                        "type": "integer"
+                    },
+            
+                    "dbs": { "$ref": "#/definitions/dbs" },
+            
+                    "ua": { "$ref": "#/definitions/ua" }
+                },
+            
+                "required": [ "url", "every" ]
+            }
+        }
+    }
+}
