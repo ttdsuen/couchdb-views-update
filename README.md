@@ -1,2 +1,2 @@
 # couchdb-views-update
-Update CouchDB views by accessing them efficiently. 
+Update CouchDB views by accessing them efficiently at regular interval.
