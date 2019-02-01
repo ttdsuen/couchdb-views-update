@@ -4,7 +4,7 @@ Update CouchDB views by accessing them efficiently on regular interval. CouchDB 
 ## Getting Started
 
 ### Prerequisites
-This script requires Perl 5.24 or later along with Mojolicious framework. You also need to install JSON::XS. If SSL is required, you need to install SSLeay module as well. Details can be found at [Mojolicious Website](https://mojolicious.org)
+This script requires Perl 5.24 or later along with Mojolicious framework. You also need to install JSON::XS. If SSL is required, you need to install SSLeay module as well. Details can be found at [Mojolicious Website](https://mojolicious.org).
 
 ### Deployment
 After the environment is set up (assuming Perl home directory is at /opt/perl524), use [configuration file](https://github.com/ttdsuen/couchdb-views-update/blob/master/config_sample.json) as a sample and construct yours. For example,
@@ -22,5 +22,5 @@ perl /opt/couchdb-views-update/bin/couchdb-views-update.pl
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details.
 
